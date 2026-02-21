@@ -1,0 +1,14 @@
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/bin/Debug/net8.0/HealthResponder
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/bin/Debug/net8.0/HealthResponder.deps.json
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/bin/Debug/net8.0/HealthResponder.runtimeconfig.json
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/bin/Debug/net8.0/HealthResponder.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/bin/Debug/net8.0/HealthResponder.pdb
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/obj/Debug/net8.0/HealthResponder.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/obj/Debug/net8.0/HealthResponder.AssemblyInfoInputs.cache
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/obj/Debug/net8.0/HealthResponder.AssemblyInfo.cs
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/obj/Debug/net8.0/HealthResponder.csproj.CoreCompileInputs.cache
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/obj/Debug/net8.0/HealthResponder.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/obj/Debug/net8.0/refint/HealthResponder.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/obj/Debug/net8.0/HealthResponder.pdb
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/obj/Debug/net8.0/HealthResponder.genruntimeconfig.cache
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthResponder/obj/Debug/net8.0/ref/HealthResponder.dll
