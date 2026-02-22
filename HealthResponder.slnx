@@ -1,5 +1,7 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/HealthResponder/HealthResponder.csproj" />
+    <Project Path="src/HeartBeatMonitor/HeartBeatMonitor.csproj" />
+    <Project Path="src/HeartBeatSimulator/HeartBeatSimulator.csproj" />
   </Folder>
 </Solution>
