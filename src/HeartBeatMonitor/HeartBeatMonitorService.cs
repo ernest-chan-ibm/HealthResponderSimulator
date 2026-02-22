@@ -5,11 +5,17 @@ namespace HeartBeatMonitor;
 
 public class HeartBeatMonitorService
 {
+    private const int IrregularThresholdSeconds = 20;
+
     private readonly EventGridReceiverClient? _receiver;
     private readonly BpmCalculator _calculator = new(windowSize: 10);
     private CancellationTokenSource _cts = new();
     private Task? _beatTask;
     private Task? _displayTask;
+
+    // Irregular heartbeat tracking
+    private DateTimeOffset? _irregularSince;
+    private bool _alertFired;
 
     // Dry-run simulation state
     private volatile int _simulatedBpm = 72;
@@ -119,6 +125,43 @@ public class HeartBeatMonitorService
                 : "-- BPM  [calculating...]";
 
             Console.WriteLine($"[{DateTimeOffset.UtcNow:HH:mm:ss}] {bpmDisplay}");
+
+            // ── Irregular heartbeat escalation ────────────────────────────
+            if (calculatedBpm.HasValue)
+            {
+                var status = _calculator.Status(calculatedBpm.Value);
+                var isIrregular = status != "Normal";
+
+                if (isIrregular)
+                {
+                    _irregularSince ??= DateTimeOffset.UtcNow;
+
+                    var duration = DateTimeOffset.UtcNow - _irregularSince.Value;
+
+                    if (!_alertFired && duration.TotalSeconds >= IrregularThresholdSeconds)
+                    {
+                        _alertFired = true;
+
+                        var report =
+                            $"INCIDENT REPORT — Irregular Heartbeat Detected\n" +
+                            $"Status   : {status}\n" +
+                            $"BPM      : {calculatedBpm.Value:F1}\n" +
+                            $"Duration : {duration.TotalSeconds:F0} seconds of consecutive {status}\n" +
+                            $"Timestamp: {DateTimeOffset.UtcNow:O}\n" +
+                            $"\nThe patient has been experiencing {status.ToLower()} ({calculatedBpm.Value:F1} BPM) " +
+                            $"for {duration.TotalSeconds:F0} seconds. Please assess the situation and advise on next steps.";
+
+                        // Fire on a background thread to avoid blocking the display loop
+                        _ = Task.Run(() => TriageAlertService.FireIncidentAsync(report));
+                    }
+                }
+                else
+                {
+                    // Condition cleared — reset for next episode
+                    _irregularSince = null;
+                    _alertFired = false;
+                }
+            }
         }
     }
 }
