@@ -27,3 +27,4 @@
 /Users/ernestchan/src/repo/HealthResponderSimulator/src/HeartBeatSimulator/obj/Debug/net8.0/HeartBeatSimulator.genruntimeconfig.cache
 /Users/ernestchan/src/repo/HealthResponderSimulator/src/HeartBeatSimulator/obj/Debug/net8.0/ref/HeartBeatSimulator.dll
 /Users/ernestchan/src/repo/HealthResponderSimulator/src/HeartBeatSimulator/bin/Debug/net8.0/Azure.Messaging.EventGrid.Namespaces.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HeartBeatSimulator/obj/Debug/net8.0/HeartBeatSimulator.sourcelink.json
