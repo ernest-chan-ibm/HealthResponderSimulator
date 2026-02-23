@@ -48,3 +48,13 @@
 /Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Agents.AI.Abstractions.dll
 /Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.SemanticKernel.Agents.Abstractions.dll
 /Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.SemanticKernel.Agents.Core.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Agents.Core.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Binder.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Extensions.Http.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/ernestchan/src/repo/HealthResponderSimulator/src/HealthTriageAgent/bin/Debug/net8.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll

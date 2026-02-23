@@ -1,5 +1,6 @@
 ﻿using Microsoft.SemanticKernel;
 using HealthTriageAgent;
+using HealthTriageAgent.Agents;
 
 // ── Configuration ──────────────────────────────────────────────────────────
 var modelId       = Environment.GetEnvironmentVariable("AZURE_OPENAI_MODEL")       ?? "gpt-4o";
@@ -16,7 +17,16 @@ else
 
 var kernel = builder.Build();
 
-// ── Start agent ─────────────────────────────────────────────────────────────────
-var agent = new HealthTriageAgentService(kernel);
+// ── Start HTTP incident server (background) ────────────────────────────────────
+var cts    = new CancellationTokenSource();
+var server = new TriageHttpServer(kernel);
+var httpTask = server.StartAsync(cts.Token);
+
+// ── Start interactive console agent (foreground) ────────────────────────────────
+var agent = new HealthTriageAgent.Agents.HealthTriageAgent(kernel);
 await agent.RunAsync();
+
+// ── Shutdown ─────────────────────────────────────────────────────────────────────
+cts.Cancel();
+await httpTask;
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HeartBeatSimulator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e2246484e6f89f73be4687d375ff0960d544ab0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60ec99f6ca65313d62c0e541fbab6f607f112b3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("HeartBeatSimulator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HeartBeatSimulator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -44,6 +44,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.Agents.Core": {
+              "target": "Package",
+              "version": "[1.3.176, )"
+            },
             "Microsoft.SemanticKernel": {
               "target": "Package",
               "version": "[1.72.0, )"

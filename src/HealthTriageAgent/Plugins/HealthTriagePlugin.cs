@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using Microsoft.SemanticKernel;
+using HealthTriageAgent.Agents;
 
 namespace HealthTriageAgent.Plugins;
 
@@ -11,16 +12,18 @@ namespace HealthTriageAgent.Plugins;
 public class HealthTriagePlugin
 {
     /// <summary>
-    /// Contacts a virtual physician generalist for medical advice.
+    /// Contacts a virtual physician generalist for a diagnostic consultation.
+    /// The Kernel parameter is injected automatically by Semantic Kernel and is
+    /// not visible to the AI as a callable argument.
     /// </summary>
     [KernelFunction(nameof(ContactVirtualPhysician))]
     [Description("Inquiring medical advice from a physician generalist")]
-    public string ContactVirtualPhysician(
+    public async Task<string> ContactVirtualPhysician(
+        Kernel kernel,
         [Description("A summary of the symptoms and context to present to the physician")] string symptoms)
     {
-        // TODO: Implement — e.g. call a physician API or AI specialist model
-        //await Task.CompletedTask;
-        return $"[Placeholder] Virtual physician contacted with symptoms: {symptoms}";
+        var physician = new VirtualPhysicianAgent(kernel);
+        return await physician.ConsultAsync(symptoms);
     }
 
 
